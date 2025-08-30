@@ -30,7 +30,7 @@ int main(){
             }
         }
 
-        if(flag==0) cout<<i<<endl;
+        if(flag==0) cout<<"Missing element is "<<i<<endl;
     }
 
     for(int i=0; i<a.size(); i++){

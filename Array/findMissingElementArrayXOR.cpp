@@ -19,16 +19,14 @@ int main(){
         a.push_back(y);
     }
 
-    vector<int> hashArr(n+1,0);
+    int xor1,xor2=0;
+    sum=n*(n+1)/2;
 
     for(int i=0; i<n; i++){
-        hashArr[a[i]]=1;
+        s2+=a[i];
     }
 
-    for(int i=0; i<=n; i++){
-        if(hashArr[i]==0) cout<<"missing element is "<<i<<endl;
-    }
-
+    cout<<"missing element is "<<sum-s2<<endl;
 
     
 
