@@ -13,22 +13,26 @@ int main(){
     vector<int> a;
     int y;
 
-    cout<<"enter elements of first array: "<<endl;
+    cout<<"enter elements of array: "<<endl;
     for(int i=0; i<n; i++){
         cin>>y;
         a.push_back(y);
     }
 
-    int xor1,xor2=0;
-    sum=n*(n+1)/2;
+    int xor1=0,xor2=0;
 
-    for(int i=0; i<n; i++){
-        s2+=a[i];
+    for(int i=0; i<=n; i++){
+        xor1=xor1^i;
     }
 
-    cout<<"missing element is "<<sum-s2<<endl;
+    for(int i=0; i<n; i++){
+        xor2=xor2^a[i];
+    }
 
-    
+    x =  xor1^xor2;
+
+    cout<<"the missing element is "<<x<<endl;
+
 
     for(int i=0; i<a.size(); i++){
         cout<<a[i]<<" ";
