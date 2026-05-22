@@ -22,8 +22,8 @@ int main(){
             largest=a[i];
         }
 
-        if(a[i]<largest){
-            if(a[i]>sLargest){
+        else{
+            if(a[i]<largest && a[i]>sLargest){
                 sLargest=a[i];
             }
         }
