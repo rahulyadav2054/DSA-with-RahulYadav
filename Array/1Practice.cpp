@@ -12,22 +12,28 @@ int main(){
         arr.push_back(x);
     }
 
-    int largest=INT_MIN;
-    int seclargest=INT_MIN;
+    int k;
+    cout<<"enter the no. of elements for rotations: "<<endl;
+    cin>>k;
 
-    for(int i=0; i<n; i++){
-        if(arr[i]>largest){
-            seclargest=largest;
-            largest=arr[i];
-        }
-        else{
-            if(arr[i]<largest && arr[i]>seclargest){
-                seclargest=arr[i];
-            }
-        }
+    vector<int> temp;
+    for(int i=0; i<k; i++){
+        temp.push_back(arr[i]);
     }
 
-    cout<<"largest element of the array is : "<<largest<<endl;
-    cout<<"second largest element is: "<<seclargest<<endl;
+    for(int i=0; i<n; i++){
+        cout<<temp[i]<<" ";
+    }
 
+    for(int i=k; i<n; i++){
+        arr[i-k]=arr[i];
+    }
+
+    for(int i=0; i<n; i++){
+        arr[n+i-k]=temp[i];
+    }
+
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
 }
