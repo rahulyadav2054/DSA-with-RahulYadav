@@ -29,8 +29,8 @@ vector<int> UnionSortedArray(vector<int> &arr1, vector<int> &arr2, int n1, int n
     }
 
     while(j<n2){
-        if(unionArray.size()==0 || unionArray.back()!=arr1[j]){
-                unionArray.push_back(arr1[j]);
+        if(unionArray.size()==0 || unionArray.back()!=arr2[j]){
+                unionArray.push_back(arr2[j]);
             }
             j++;
     }
