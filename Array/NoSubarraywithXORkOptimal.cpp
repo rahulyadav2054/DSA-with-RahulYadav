@@ -24,8 +24,9 @@ int main(){
     for(int i=0; i<n; i++){
         XOR=XOR^arr[i];
         int x=XOR^k;
-        count=count+mpp[x];
+        count+=mpp[x];
         mpp[XOR]++;
+        
     }
 
     cout<<"no. of subarrays with xor k is "<<count<<endl;
